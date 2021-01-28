@@ -8,8 +8,6 @@ import (
 	"strconv"
 	"strings"
 	"time"
-	//	"unsafe"
-	//	"reflect"
 )
 
 //字节转换成整形
@@ -53,7 +51,7 @@ func BytesToByteStr(b []byte, ch ...string) string {
 	for i := 0; i < length; i++ {
 		if ch != nil {
 			if ss == "" {
-				ss = fmt.Sprintf("%s%02x", ss, b[i])
+				ss = fmt.Sprintf("%s%s%02x", ss, ch[0], b[i])
 			} else {
 				ss = fmt.Sprintf("%s%s%02x", ss, ch[0], b[i])
 			}
